@@ -62,6 +62,7 @@ export const updateIncident = (incident, id) => {
     return function (dispatch) {
         axios.put(`${process.env.REACT_APP_API}/${id}`, incident).then((resp) => {
             dispatch(incidentUpdated());
+            dispatch(loadIncidents());
         }).catch((error) => console.log(error));
     }
 };
