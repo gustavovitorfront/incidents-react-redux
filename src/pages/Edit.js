@@ -9,21 +9,21 @@ import BackIcon from '@mui/icons-material/ArrowBack';
 
 const useStyles = makeStyles(() => ({
     buttonBackIncident: {
-        ['@media (min-width:780px)']: {
+        '@media (min-width: 780px)': {
             marginTop: "25px !important",
         },
-        ['@media (max-width:780px)']: {
+        '@media (max-width: 780px)': {
             marginTop: "25px !important"
         },
         float: 'right'
     },
     titlePage: {
         fontSize: 28,
-        ['@media (min-width:780px)']: {
+        '@media (min-width: 780px)': {
             textAlign: 'left',
             paddingLeft: 5
         },
-        ['@media (max-width:780px)']: {
+        '@media (max-width: 780px)': {
             textAlign: 'center',
         },
         fontWeight: 100,
@@ -49,7 +49,7 @@ const Edit = () => {
 
     useEffect(() => {
         dispatch(getSingleIncident(id));
-    }, []);
+    }, [dispatch, id]);
 
     useEffect(() => {
         if (incident) {
@@ -59,7 +59,7 @@ const Edit = () => {
 
     const handleInputChange = (e) => {
         let { name, value } = e.target;
-        if (name == 'status') {
+        if (name === 'status') {
             setState({ ...state, [name]: e.target.checked })
         } else {
             setState({ ...state, [name]: value })

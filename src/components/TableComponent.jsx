@@ -8,10 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { labelsCriticalities, labelsCriticalitiesColor, labelStatus, labelsTypes } from '../helpers/labelsData';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
-import { Button, ButtonGroup, makeStyles } from '@material-ui/core';
+import { Button, makeStyles } from '@material-ui/core';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { TablePagination } from '@mui/material';
@@ -39,7 +36,7 @@ const useStyles = makeStyles(() => ({
         minWidth: 43
     },
     mbButtonActions: {
-        ['@media (max-width:780px)']: {
+        '@media (max-width: 780px)': {
             width: "100%",
             marginBottom: 5
         }

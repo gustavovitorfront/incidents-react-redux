@@ -10,21 +10,21 @@ import ResponsiveDialog from '../components/ResponsiveDialog';
 
 const useStyles = makeStyles(() => ({
     buttonNewIncident: {
-        ['@media (min-width:780px)']: {
+        '@media (min-width: 780px)': {
             marginTop: '22px !important',
         },
-        ['@media (max-width:780px)']: {
+        '@media (max-width: 780px)': {
             marginTop: '25px !important'
         },
         float: 'right'
     },
     titlePage: {
         fontSize: 28,
-        ['@media (min-width:780px)']: {
+        '@media (min-width: 780px)': {
             textAlign: 'left',
             paddingLeft: 5
         },
-        ['@media (max-width:780px)']: {
+        '@media (max-width: 780px)': {
             textAlign: 'center',
         },
         fontWeight: 100,
@@ -48,7 +48,7 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(loadIncidents());
-    }, []);
+    }, [dispatch]);
 
     const handleDelete = (id) => {
 
@@ -109,7 +109,7 @@ const Home = () => {
                 handleConfirm={handleConfirmDialog}
             />
 
-            <h5>Feito por: <a className={classes.creditsA} href='https://gustavovitor.info/' target="_blank">Gustavo Vitor</a></h5>
+            <h5>Feito por: <a rel="noreferrer" className={classes.creditsA} href='https://gustavovitor.info/' target="_blank">Gustavo Vitor</a></h5>
         </Container>
     )
 }

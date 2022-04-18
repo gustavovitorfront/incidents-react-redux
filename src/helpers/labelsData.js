@@ -11,9 +11,6 @@ export function labelsCriticalities(type) {
         case 1:
             label = "Baixa";
             break;
-        default:
-            label = "Indefinido";
-            break;
     }
 
     return label;
@@ -47,15 +44,12 @@ export function labelsTypes(type) {
         case 1:
             label = "Alarme";
             break;
-        default:
-            label = "Outros";
-            break;
     }
 
     return label;
 }
 
-export function labelStatus(type){
+export function labelStatus(type) {
     var label = "";
 
     switch (type) {
@@ -64,9 +58,6 @@ export function labelStatus(type){
             break;
         case 0:
             label = "Inativo";
-            break;
-        default:
-            label = "Indefinido";
             break;
     }
 

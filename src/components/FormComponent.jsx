@@ -1,9 +1,9 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import React, { useState } from 'react'
+import React from 'react'
 import MenuItem from '@mui/material/MenuItem';
 import { criticalites, types } from '../helpers/selectsData';
-import { Button, Container, FormControlLabel, FormGroup, Grid, Switch } from '@mui/material';
+import { Button, FormControlLabel, FormGroup, Grid, Switch } from '@mui/material';
 import { makeStyles } from "@material-ui/styles";
 import { FormControl } from '@material-ui/core';
 import SaveIcon from '@mui/icons-material/Save';
@@ -21,15 +21,15 @@ const useStyles = makeStyles(() => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        ['@media (min-width:780px)']: {
-        marginLeft: 15
+        '@media (min-width: 780px)': {
+            marginLeft: 15
         },
-        ['@media (max-width:780px)']: {
+        '@media (max-width: 780px)': {
             marginLeft: 4
         }
     },
     typeStyle: {
-        ['@media (min-width:780px)']: {
+        '@media (min-width: 780px)': {
             marginLeft: '12px'
         }
     }
@@ -137,8 +137,8 @@ const FormComponent = (props) => {
                         </FormGroup>
                     </Grid>
                 </Grid>
-                   
-                <Button sx={{float: "left", marginLeft: 1.1, width: '100%', marginTop: 1, padding: 1}} variant="contained" color="success" type="submit"><SaveIcon style={{ marginRight: 5 }} /> Salvar</Button>
+
+                <Button sx={{ float: "left", marginLeft: 1.1, width: '100%', marginTop: 1, padding: 1 }} variant="contained" color="success" type="submit"><SaveIcon style={{ marginRight: 5 }} /> Salvar</Button>
             </Box >
         </Grid >
     )
