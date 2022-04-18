@@ -11,6 +11,9 @@ export function labelsCriticalities(type) {
         case 1:
             label = "Baixa";
             break;
+        default:
+            label = "Indefinido";
+            break;
     }
 
     return label;
@@ -29,6 +32,9 @@ export function labelsCriticalitiesColor(type) {
         case 1:
             label = "#9f9f9f";
             break;
+        default:
+            label = "";
+            break;
     }
 
     return label;
@@ -44,6 +50,9 @@ export function labelsTypes(type) {
         case 1:
             label = "Alarme";
             break;
+        default:
+            label = "Outros";
+            break;
     }
 
     return label;
@@ -58,6 +67,9 @@ export function labelStatus(type) {
             break;
         case 0:
             label = "Inativo";
+            break;
+        default:
+            label = "Indefinido";
             break;
     }
 
